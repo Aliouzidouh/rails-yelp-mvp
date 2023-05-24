@@ -1,0 +1,21 @@
+<h1>INDEX DES RESTAURANTS</h1>
+
+<br>
+<br>
+
+<%= link_to "Rajouter un restaurant", new_restaurant_path %>
+
+<br>
+<br>
+
+
+<% @restaurants.each do |restaurant| %>
+  <%= link_to restaurant_path(restaurant) do %>
+    <div>
+      <%= restaurant.name %>
+      <%= restaurant.address %>
+      <%= restaurant.category %>
+      <%= restaurant.phone_number %>
+    </div>
+  <% end %>
+<% end %>
